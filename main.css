@@ -1,6 +1,11 @@
 @charset "utf-8";
+
+/*Fonts*/
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 @import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+/*Styles*/
 @import url("reset.css");
 @import url("animations.css");
 
@@ -71,15 +76,44 @@ li a:hover {
 	margin-top: 23.5px;
 }
 
-.content {
+.content-card {
 	max-width:1300px;
 	width: 90%;
-	height:800px;
-	margin: 0 auto;
-	margin-top: 200px;
+	height: 400px;
+	margin: 0 auto 20px auto;
 	text-align: center;
 	background: #9fbbc7;
 	transition: all 0.2s;
+}
+
+.content-card.top {
+	margin-top: 150px;
+}
+
+.card-title {
+	width: 70px;
+	height: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+	background: #3e5370;
+
+	word-wrap: break-word;
+	text-transform: uppercase;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 200%;
+	text-shadow: 0 3px 1px #333;
+	line-height: 50px;
+	color: #ddd;
+}
+
+.card-title.left {
+	float: left;
+	border-right: 3px solid white;
+}
+
+.card-title.right {
+	float: right;
+	border-left: 3px solid white;
 }
 
 h1

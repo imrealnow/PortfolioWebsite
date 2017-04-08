@@ -31,26 +31,40 @@
 
     <script type="text/javascript">
         document.body.onload = function () {
-                var textcontrol = document.getElementById("horizontal-scroll");
-                textcontrol.style.height = (window.innerHeight) + 72 + 'px';
+                var body = document.body,
+                html = document.documentElement;
+
+                var height = Math.max( body.scrollHeight, body.offsetHeight, 
+                html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+                var el = document.getElementById("horizontal-scroll");
+                el.style.height = height;
             }
     </script>
+
 </header>
 
 <body>
 <div id="horizontal-scroll"></div>
-<div class="content">
+<div class="content-card top">
+    <div class="card-title left"> intro </div>
     <section>
-    <p>
         <h2>todo</h2>
         <ul>
             <li>make the navbar collapsible</li>
             <li>flesh out the content and the style</li>
             <li>start on the other pages</li>
         </ul>
-    </p>
     </section>
-
+</div>
+<div class="content-card">
+    <div class="card-title right"> games </div>
+</div>
+<div class="content-card">
+    <div class="card-title left"> design </div>
+</div>
+<div class="content-card">
+    <div class="card-title right"> Web </div>
 </div>
 </body>
 
