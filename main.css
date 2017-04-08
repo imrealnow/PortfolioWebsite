@@ -93,7 +93,7 @@ li a:hover {
 .card-title {
 	width: 70px;
 	height: 100%;
-	padding: 20px;
+	padding: 25px;
 	box-sizing: border-box;
 	background: #3e5370;
 
@@ -166,12 +166,8 @@ p {
 		margin: 5px 0;
 	}
 
-	.content {
+	.content-card {
 		width: 100%;
-	}
-
-	.content h1{
-		font-size: 250%;
 	}
 
 	p {
