@@ -8,29 +8,58 @@
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js" ></script>
+    <script type="text/javascript"> 
+        function scrollIntoView(eleID) {
+            var e = document.getElementById(eleID);
+            while(Math.abs(document.scrollHeight - eleID.scrollHeight) < 5)
+            {
+                document.scrollTo( 
+                document.scrollHeight - 
+                ((document.scrollHeight - eleID.scrollHeight)*0.75));
+            }
+        }
+    </script>
     <link rel="icon" type="image/png" href="images/LG_favicon.png">
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <![endif]-->
 
 </head>
-<header>
-    <div class="header-wrapper">
-        <div class=icon></div>
-        <div class="name-div"><h1>Liam Green</h1></div>
-        <div class="label-div"><i class="fa fa-bars"></i>
-        <nav>
-            <ul>
-                <li><a href="#">games</a></li>
-                <li><a href="#">design</a></li>
-                <li><a href="#">sites</a></li>
-                <li><a href="#">about</a></li>
-                <li><a href="#">contact</a></li>
-            </ul>
-        </nav>
+<body>
+    <header>
+        <div class="header-wrapper" id="headerTop">
+          <div class=icon></div>
+            <div class="name-div"><h1>Liam Green</h1></div>
+            <div class="label-div"><i class="fa fa-bars"></i>
+            <nav>
+                <ul>
+                    <li><a href="#">games</a></li>
+                    <li><a href="#">design</a></li>
+                    <li><a href="#">sites</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </nav>
+            </div>
         </div>
-    </div>
+        <div class="scroll-indicator">
+            <div class="test" onclick="scrollIntoView('headerTop')">
+                <i class="fa fa-arrow-up" aria-hidden="true"></i>
+            </div>
+            <div class="test">
+                <i class="fa fa-gamepad" aria-hidden="true"></i>
+            </div>
+            <div class="test">
+                <i class="fa fa-picture-o" aria-hidden="true"></i>
+            </div>
+            <div class="test">
+                <i class="fa fa-code" aria-hidden="true"></i>
+            </div>
+            <div class="test">
+                <i class="fa fa-arrow-down" aria-hidden="true"></i>
+            </div>
 
+        </div>
 <!--
     <script type="text/javascript">
         document.body.onload = function () {
@@ -49,7 +78,7 @@
 
 </header>
 
-<body>
+
 <div id="horizontal-scroll"></div>
 <div class="content-card top">
     <div class="card-title left" id="introcard"> intro </div>
