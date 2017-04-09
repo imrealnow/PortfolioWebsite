@@ -180,23 +180,15 @@ p {
 	.content-card {
 		width: 85%;
 		margin-left: 0;
-		padding-left: 0;
-	}
-
-	.content-card p {
-		margin-left: 0;
-		font-size: 110%;
 	}
 
 	.card-title.left {
 		display: none;
 		border-right: 3px solid white;
 	}
-}
 
-@media screen and (max-width: 400px) {
-.content-card p {
+	p {
 		font-size: 100%;
+		line-height: 160%;
 	}
-
 }
