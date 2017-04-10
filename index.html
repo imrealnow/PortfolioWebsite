@@ -11,6 +11,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 	<script type="text/javascript">
+		var sidebarActive = false;
+
 		$(document).ready(function() {
 			$(document).on("scroll", onScroll);
 
@@ -23,7 +25,7 @@
 					$target = $(target);
 				$('html, body').animate({
 					'scrollTop': $target.offset().top + 2
-				}, 500, 'swing', function() {
+				}, 200, 'swing', function() {
 					window.location.hash = target;
 					$(".scroll-indicator").removeClass("showindicator");
 					$(document).on("scroll", onScroll);
@@ -35,10 +37,15 @@
 			var scrollPos = $(document).scrollTop();
 			if ($(".header-wrapper").position().top + $(".header-wrapper").height() <= scrollPos) {
 				$(".scroll-indicator").addClass("showindicator");
-				$(".scroll-indicator").animate({
-					opacity: 0.8
-				}, 20, "swing");
+				
+				if (!sidebarActive) {
+					sidebarActive = true;
+					$(".scroll-indicator").animate({
+						opacity: 0.8
+					}, 20, "swing");
+				}
 			} else {
+				sidebarActive = false;
 				$(".scroll-indicator").css("opacity", "0");
 				$(".scroll-indicator").removeClass("showindicator");
 			}
