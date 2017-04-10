@@ -1,14 +1,15 @@
 @charset "utf-8";
 
 /*Fonts*/
+
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 @import url(https://fonts.googleapis.com/css?family=Oswald);
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 
 /*Styles*/
+
 @import url("reset.css");
 @import url("animations.css");
-
 header {
 	opacity: 0.85;
 	background: #3e5370;
@@ -22,6 +23,7 @@ header {
 	overflow: hidden;
 	margin: 0 auto;
 }
+
 .header-wrapper .icon {
 	float: left;
 	height: 45px;
@@ -32,32 +34,41 @@ header {
 }
 
 .scroll-indicator {
+	display: none;
 	position: fixed;
 	right: 10px;
 	top: 15%;
 	bottom: 15%;
 	width: 60px;
 	height: 70%;
-	opacity: 0.5;
+	opacity: 0;
 	transition: all 0.3s;
 }
+
+.showindicator {
+	display: block;
+}
+
 .scroll-indicator .test {
 	background: #777;
 	height: 60px;
 	border-radius: 50%;
 	margin-bottom: 5px;
 }
-.test:hover {background: #999;}
+
+.test:hover {
+	background: #999;
+}
+
 .test i {
 	position: relative;
-  	top: 50%;
-  	transform: translateY(-50%);
-  	width: 100%;
-	font-size: 150%; 
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+	font-size: 150%;
 	color: #eee;
 	text-align: center;
 }
-
 
 li a {
 	border-radius: 2px;
@@ -69,9 +80,16 @@ li a {
 	color: #ffffff;
 	transition: all 0.2s;
 }
-li a:hover { background: #9fbbc7;}
 
-.label-div { float: right; margin: 22.5px 0;}
+li a:hover {
+	background: #9fbbc7;
+}
+
+.label-div {
+	float: right;
+	margin: 22.5px 0;
+}
+
 .label-div i {
 	float: right;
 	display: none;
@@ -80,8 +98,15 @@ li a:hover { background: #9fbbc7;}
 	text-shadow: 0 2px #222;
 	transition: all 0.2s;
 }
-.label-div ul {list-style-type: none;}
-.label-div ul li {display:inline-block; margin: 0 1px;}
+
+.label-div ul {
+	list-style-type: none;
+}
+
+.label-div ul li {
+	display: inline-block;
+	margin: 0 1px;
+}
 
 .name-div {
 	float: left;
@@ -91,14 +116,15 @@ li a:hover { background: #9fbbc7;}
 }
 
 .content-card {
-	max-width:1300px;
+	max-width: 1300px;
 	width: 90%;
 	height: 650px;
-	margin: 0 80px 30px auto;
+	margin: 0 auto 30px auto;
 	background: #9fbbc7;
 	transition: all 0.2s;
 	text-align: left;
 }
+
 .content-card p {
 	font-family: "Raleway", sans-serif;
 	font-size: 120%;
@@ -107,7 +133,10 @@ li a:hover { background: #9fbbc7;}
 	padding: 10px;
 	margin-left: 70px;
 }
-.content-card.top {margin-top: 80px;}
+
+.content-card.top {
+	margin-top: 80px;
+}
 
 .card-title {
 	width: 70px;
@@ -115,7 +144,6 @@ li a:hover { background: #9fbbc7;}
 	padding: 21px;
 	box-sizing: border-box;
 	background: #3e5370;
-
 	word-wrap: break-word;
 	text-transform: uppercase;
 	font-family: 'Roboto Condensed', sans-serif;
@@ -126,14 +154,17 @@ li a:hover { background: #9fbbc7;}
 	color: #ddd;
 }
 
-.card-title.left {float: left; border-right: 3px solid white;
+.card-title.left {
+	float: left;
+	border-right: 3px solid white;
 }
 
-.card-title.right {float: right; border-left: 3px solid white;
+.card-title.right {
+	float: right;
+	border-left: 3px solid white;
 }
 
-h1
-{
+h1 {
 	font-family: 'Raleway', sans-serif;
 	color: #9fbbc7;
 	text-shadow: 0px 1px #001b30;
@@ -149,36 +180,56 @@ p {
 	font-family: sans-serif;
 }
 
+@media screen and (max-width: 1480px) {
+	.content-card {
+		margin-right: 80px;
+	}
+}
+
 @media screen and (max-width: 780px) {
-	.label-div {margin: 21.5px 0;}
-	.label-div i {display: block;}
-	.label-div nav {display: none;}
-	.label-div ul {background: #3e5370; opacity: 0.75;}
+	.label-div {
+		margin: 21.5px 0;
+	}
+	.label-div i {
+		display: block;
+	}
+	.label-div nav {
+		display: none;
+	}
+	.label-div ul {
+		background: #3e5370;
+		opacity: 0.75;
+	}
 	.label-div:hover nav {
 		position: absolute;
 		display: inline-block;
-		right:0;
-		top:72px;
+		right: 0;
+		top: 72px;
 		max-width: 92px;
 	}
-
 	li a {
 		float: right;
 		text-align: right;
 		font-size: 150%;
 		margin: 5px 0;
 	}
-
 	.content-card {
 		width: 85%;
 		margin-left: 0;
 		padding-left: 0;
 	}
-	.content-card p {margin-left: 0; font-size: 110%;}
-
-	.card-title.left {display: none; border-right: 3px solid white;}
+	.content-card p {
+		margin-left: 0;
+		font-size: 110%;
+	}
+	.card-title.left {
+		display: none;
+		border-right: 3px solid white;
+	}
 }
 
 @media screen and (max-width: 400px) {
-	.content-card p {font-size: 100%;}
+	.content-card p {
+		font-size: 100%;
+	}
 }
