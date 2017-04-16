@@ -129,13 +129,24 @@ li a:hover {
 	text-align: left;
 }
 
+#self-portrait {
+	float:right;
+	min-height: 100%;
+	width: 20%;
+	margin: 0 10px 0 10px;
+	background: url("images/self-portrait.png") no-repeat;
+	background-size: contain;
+}
+
 .content-card p {
 	font-family: "Raleway", sans-serif;
 	font-size: 120%;
 	line-height: 120%;
 	color: #ddd;
 	padding: 10px;
-	margin-left: 70px;
+	margin: 0;
+	max-width: 63%;
+	float: left;
 }
 
 .content-card.top {
@@ -191,6 +202,12 @@ p {
 }
 
 @media screen and (max-width: 780px) {
+	#self-portrait {
+		min-height: 250px;
+		width: 131px;
+		background: url("images/self-portrait-small.png") no-repeat;
+		margin: 0 0 0 10px;
+	}
 	.label-div {
 		margin: 21.5px 0;
 	}
@@ -223,12 +240,20 @@ p {
 		padding-left: 0;
 	}
 	.content-card p {
-		margin-left: 0;
+		float: none;
+		margin: 0;
 		font-size: 110%;
+		max-width: 100%;
 	}
 	.card-title.left {
-		display: none;
-		border-right: 3px solid white;
+		float: none;
+		height: 70px;
+		width: 100%;
+		padding: 10px;
+		letter-spacing: 10px;
+		border-right: hidden;
+		border-bottom: 3px solid white;
+		clear: both;
 	}
 }
 
