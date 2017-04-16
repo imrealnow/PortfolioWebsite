@@ -16,6 +16,10 @@ header {
 	box-shadow: 0 -10px 50px #444;
 }
 
+body {
+	min-width: 300px;
+}
+
 .header-wrapper {
 	width: 90%;
 	max-width: 1300px;
