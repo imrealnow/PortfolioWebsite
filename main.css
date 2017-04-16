@@ -62,51 +62,6 @@ header .icon {
 	text-align: center;
 }
 
-li a {
-	border-radius: 2px;
-	padding: 3px 5px;
-	font-size: 170%;
-	font-family: Oswald, sans-serif;
-	text-decoration: none;
-	text-transform: uppercase;
-	color: #ffffff;
-	transition: all 0.2s;
-}
-
-li a:hover {
-	background: #9fbbc7;
-}
-
-.label-div {
-	float: right;
-	margin: 22.5px 0;
-}
-
-.label-div i {
-	float: right;
-	display: none;
-	font-size: 180%;
-	color: #fff;
-	text-shadow: 0 2px #222;
-	transition: all 0.2s;
-}
-
-.label-div ul {
-	list-style-type: none;
-}
-
-.label-div ul li {
-	display: inline-block;
-	margin: 0 1px;
-}
-
-.name-div {
-	float: left;
-	width: 160px;
-	height: 29px;
-	margin-top: 23.5px;
-}
-
 .content-card {
 	max-width: 1300px;
 	width: 85%;
@@ -133,8 +88,8 @@ li a:hover {
 .content-card p {
 	font-family: "Raleway", sans-serif;
 	font-size: 120%;
-	line-height: 120%;
-	color: #ddd;
+	line-height: 130%;
+	color: #222;
 	padding: 10px;
 	margin: 0;
 	max-width: 63%;
@@ -149,7 +104,7 @@ li a:hover {
 }
 
 .content-card li {
-	color: #ddd;
+	color: #222;
 	font-family: "Raleway", sans-serif;
 	line-height: 25px;
 	margin-left: 30px;
@@ -206,6 +161,11 @@ em {
 }
 
 @media screen and (max-width: 780px) {
+	header .icon {
+		left: auto;
+		right: 18px;
+	}
+	
 	#intro {
 		height: 500px;
 	}
@@ -264,6 +224,14 @@ em {
 		clear: both;
 	}
 }
+@media screen and (max-width: 525px) {
+	header {
+		display: none;
+	}
+	.content-card {
+		width: 100%;
+	}
+}
 @media screen and (max-width: 460px) {
 	#intro {
 		height: 550px;
@@ -277,7 +245,6 @@ em {
 		font-size: 95%;
 	}
 }
-
 @media screen and (max-width: 330px) {
 	.content-card p {
 		font-size: 90%;
