@@ -10,29 +10,17 @@
 
 @import url("reset.css");
 @import url("animations.css");
-header {
-	opacity: 0.85;
-	background: #3e5370;
-	box-shadow: 0 -10px 50px #444;
-}
 
 body {
 	min-width: 300px;
 }
 
-.header-wrapper {
-	width: 90%;
-	max-width: 1300px;
-	height: 72px;
-	overflow: hidden;
-	margin: 0 auto;
-}
-
-.header-wrapper .icon {
-	float: left;
+header .icon {
+	position: fixed;
+	top: 20px;
+	left: 20px;
 	height: 45px;
 	width: 45px;
-	margin: 13.5px 10px 0 0;
 	background: url("images/LG_Icon.png") no-repeat center;
 	background-size: contain;
 }
@@ -53,18 +41,18 @@ body {
 	display: block;
 }
 
-.scroll-indicator .test {
+.scroll-indicator .navbutton {
 	background: #777;
 	height: 60px;
 	border-radius: 50%;
 	margin-bottom: 5px;
 }
 
-.test:hover {
+.navbutton:hover {
 	background: #999;
 }
 
-.test i {
+.navbutton i {
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
@@ -121,7 +109,7 @@ li a:hover {
 
 .content-card {
 	max-width: 1300px;
-	width: 90%;
+	width: 85%;
 	height: 650px;
 	margin: 0 auto 30px auto;
 	background: #9fbbc7;
@@ -129,7 +117,7 @@ li a:hover {
 	text-align: left;
 }
 
-#introcard {
+#intro {
 	height: 400px;
 }
 
@@ -168,7 +156,7 @@ li a:hover {
 }
 
 .content-card.top {
-	margin-top: 80px;
+	margin-top: 30px;
 }
 
 .card-title {
@@ -218,7 +206,7 @@ em {
 }
 
 @media screen and (max-width: 780px) {
-	#introcard {
+	#intro {
 		height: 500px;
 	}
 	#self-portrait {
@@ -277,12 +265,12 @@ em {
 	}
 }
 @media screen and (max-width: 460px) {
-	#introcard {
+	#intro {
 		height: 550px;
 	}
 }
 @media screen and (max-width: 400px) {
-	#introcard {
+	#intro {
 		height: 600px;
 	}
 	.content-card p {

@@ -22,7 +22,7 @@ var sidebarActive = false;
 
 		function onScroll(event) {
 			var scrollPos = $(document).scrollTop();
-			if ($(".header-wrapper").position().top + $(".header-wrapper").height() <= scrollPos) {
+			if ($("header").position().top + $("header").height() <= scrollPos) {
 				$(".scroll-indicator").addClass("showindicator");
 
 				if (!sidebarActive) {
