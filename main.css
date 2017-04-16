@@ -129,8 +129,12 @@ li a:hover {
 	text-align: left;
 }
 
+#introcard {
+	height: 400px;
+}
+
 #self-portrait {
-	float:right;
+	float: right;
 	min-height: 100%;
 	width: 20%;
 	margin: 0 10px 0 10px;
@@ -147,6 +151,20 @@ li a:hover {
 	margin: 0;
 	max-width: 63%;
 	float: left;
+	word-wrap: break-word
+}
+
+.content-card ul {
+	width: 50%;
+	list-style-type: circle;
+	float: left;
+}
+
+.content-card li {
+	color: #ddd;
+	font-family: "Raleway", sans-serif;
+	line-height: 25px;
+	margin-left: 30px;
 }
 
 .content-card.top {
@@ -187,12 +205,10 @@ h1 {
 	font-size: 160%
 }
 
-p {
-	font-size: 160%;
-	line-height: 210%;
-	text-align: justify;
-	margin: 3%;
-	font-family: sans-serif;
+em {
+	color: #fff;
+	font-weight: 100;
+	font-size: 123%;
 }
 
 @media screen and (max-width: 1480px) {
@@ -202,6 +218,9 @@ p {
 }
 
 @media screen and (max-width: 780px) {
+	#introcard {
+		height: 500px;
+	}
 	#self-portrait {
 		min-height: 250px;
 		width: 131px;
@@ -244,6 +263,7 @@ p {
 		margin: 0;
 		font-size: 110%;
 		max-width: 100%;
+		line-height: 19px;
 	}
 	.card-title.left {
 		float: none;
@@ -256,9 +276,22 @@ p {
 		clear: both;
 	}
 }
-
+@media screen and (max-width: 460px) {
+	#introcard {
+		height: 550px;
+	}
+}
 @media screen and (max-width: 400px) {
+	#introcard {
+		height: 600px;
+	}
 	.content-card p {
-		font-size: 100%;
+		font-size: 95%;
+	}
+}
+
+@media screen and (max-width: 330px) {
+	.content-card p {
+		font-size: 90%;
 	}
 }
