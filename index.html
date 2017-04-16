@@ -7,46 +7,50 @@
 	<title>Liam Green - Portfolio</title>
 	<link rel="stylesheet" type="text/css" href="main.css" />
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 	<script type="text/javascript">
-		var dfLoadStatus = 0;
-		var dfLoadFiles = [
-			["http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"],
-			["https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js",
-				"https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js",
-				"https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js",
-				"sidebar.js"
-			]
-		];
+		var sidebarActive = false;
 
-		function downloadJSAtOnload() {
-			if (!dfLoadFiles.length) return;
+		$(document).ready(function() {
+			$(document).on("scroll", onScroll);
 
-			var dfGroup = dfLoadFiles.shift();
-			dfLoadStatus = 0;
+			//smoothscroll
+			$('a[href^="#"]').on('click', function(e) {
+				e.preventDefault();
+				$(document).off("scroll");
 
-			for (var i = 0; i < dfGroup.length; i++) {
-				dfLoadStatus++;
-				var element = document.createElement('script');
-				element.src = dfGroup[i];
-				element.onload = element.onreadystatechange = function() {
-					if (!this.readyState ||
-						this.readyState == 'complete') {
-						dfLoadStatus--;
-						if (dfLoadStatus == 0) downloadJSAtOnload();
-					}
-				};
-				document.body.appendChild(element);
+				var target = this.hash,
+					$target = $(target);
+				$('html, body').animate({
+					'scrollTop': $target.offset().top + 2
+				}, 200, 'swing', function() {
+					window.location.hash = target;
+					$(".scroll-indicator").removeClass("showindicator");
+					$(document).on("scroll", onScroll);
+				});
+			});
+		});
+
+		function onScroll(event) {
+			var scrollPos = $(document).scrollTop();
+			if ($(".header-wrapper").position().top + $(".header-wrapper").height() <= scrollPos) {
+				$(".scroll-indicator").addClass("showindicator");
+				
+				if (!sidebarActive) {
+					sidebarActive = true;
+					$(".scroll-indicator").animate({
+						opacity: 0.8
+					}, 20, "swing");
+				}
+			} else {
+				sidebarActive = false;
+				$(".scroll-indicator").css("opacity", "0");
+				$(".scroll-indicator").removeClass("showindicator");
 			}
-
 		}
-
-		if (window.addEventListener)
-			window.addEventListener("load", downloadJSAtOnload, false);
-		else if (window.attachEvent)
-			window.attachEvent("onload", downloadJSAtOnload);
-		else window.onload = downloadJSAtOnload;
 	</script>
-
 	<link rel="icon" type="image/png" href="images/LG_favicon.png" />
 	<!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -54,7 +58,6 @@
 </head>
 
 <body>
-	<script src="sidebar.js"></script>
 	<header>
 		<div class="header-wrapper" id="headerTop">
 			<div class=icon></div>
