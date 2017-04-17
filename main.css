@@ -1,16 +1,5 @@
 @charset "utf-8";
 
-/*Fonts*/
-
-@import url(https://fonts.googleapis.com/css?family=Raleway);
-@import url(https://fonts.googleapis.com/css?family=Oswald);
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
-
-/*Styles*/
-
-@import url("reset.css");
-@import url("animations.css");
-
 body {
 	min-width: 300px;
 }
@@ -174,32 +163,6 @@ em {
 		width: 131px;
 		background: url("images/self-portrait-small.png") no-repeat;
 		margin: 0 0 0 10px;
-	}
-	.label-div {
-		margin: 21.5px 0;
-	}
-	.label-div i {
-		display: block;
-	}
-	.label-div nav {
-		display: none;
-	}
-	.label-div ul {
-		background: #3e5370;
-		opacity: 0.75;
-	}
-	.label-div:hover nav {
-		position: absolute;
-		display: inline-block;
-		right: 0;
-		top: 72px;
-		max-width: 92px;
-	}
-	li a {
-		float: right;
-		text-align: right;
-		font-size: 150%;
-		margin: 5px 0;
 	}
 	.content-card {
 		width: 85%;
