@@ -56,13 +56,31 @@ header .icon {
 	width: 85%;
 	height: 650px;
 	margin: 0 auto 30px auto;
+	border-radius: 2px;
 	background: #9fbbc7;
 	transition: all 0.2s;
 	text-align: left;
+	box-shadow: 0 5px 8px rgba(50,50,50,30); 
+}
+
+.content-card.color-red {
+	background: #c16e7c;
+}
+.content-card.color-purple {
+	background: #8e6ec1;
+}
+.content-card.color-green {
+	background: #6ec198;
+}
+.content-card.color-yellow {
+	background: #c1b86e;
+}
+.content-card.color-orange {
+	background: #c1926e;
 }
 
 #intro {
-	height: 400px;
+	height: 430px;
 }
 
 #self-portrait {
@@ -118,7 +136,18 @@ header .icon {
 	line-height: 50px;
 	color: #ddd;
 }
-
+.card-title.color-yellow {
+	background: #6f703e;
+}
+.card-title.color-orange {
+	background: #705d3e;
+}
+.card-title.color-red {
+	background: #703e3e;
+}
+.card-title.color-purple {
+	background: #573e70;
+}
 .card-title.left {
 	float: left;
 	border-right: 3px solid white;
