@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 body {
 	min-width: 300px;
 }
@@ -60,21 +59,25 @@ header .icon {
 	background: #9fbbc7;
 	transition: all 0.2s;
 	text-align: left;
-	box-shadow: 0 5px 8px rgba(50,50,50,30); 
+	box-shadow: 0 5px 8px rgba(50, 50, 50, 30);
 }
 
 .content-card.color-red {
 	background: #c16e7c;
 }
+
 .content-card.color-purple {
 	background: #8e6ec1;
 }
+
 .content-card.color-green {
 	background: #6ec198;
 }
+
 .content-card.color-yellow {
 	background: #c1b86e;
 }
+
 .content-card.color-orange {
 	background: #c1926e;
 }
@@ -121,6 +124,23 @@ header .icon {
 	margin-top: 30px;
 }
 
+.games-panel {
+	float: left;
+	width: calc(100% - 70px);
+	height: 110px;
+	background: rgba(100,100,100,255);
+}
+.game-tile {
+	width: 90px;
+	height: 90px;
+	margin: 10px 0 10px 0;
+	background: #fff;
+	float: left;
+}
+.game-tile.left, .game-tile.right {
+	margin-left: calc((100% - 270px) / 4);
+	margin-right: calc((100% - 270px) / 4);
+}
 .card-title {
 	width: 70px;
 	height: 100%;
@@ -136,26 +156,29 @@ header .icon {
 	line-height: 50px;
 	color: #ddd;
 }
-.card-title.color-yellow {
-	background: #6f703e;
+
+.work-in-progress{
+	width: 80%;
+	height: 40%;
+	margin: auto;
+	transform: translateY(50%); 
 }
-.card-title.color-orange {
-	background: #705d3e;
+.work-in-progress.text {
+	width: 100%;
+	font-size: 300%;
+	font-family: "Raleway", sans-serif;
+	text-align: center;
+	color: #222;
 }
-.card-title.color-red {
-	background: #703e3e;
-}
-.card-title.color-purple {
-	background: #573e70;
+.work-in-progress.frown{
+	width: 100px;
+	margin: 5px auto auto auto;
+	font-size: 400%;
+	text-align: center;
 }
 .card-title.left {
 	float: left;
-	border-right: 3px solid white;
-}
-
-.card-title.right {
-	float: right;
-	border-left: 3px solid white;
+	border-right: 2px solid white;
 }
 
 h1 {
@@ -183,7 +206,6 @@ em {
 		left: auto;
 		right: 18px;
 	}
-	
 	#intro {
 		height: 500px;
 	}
@@ -195,7 +217,7 @@ em {
 	}
 	.content-card {
 		width: 85%;
-		margin-left: 0;
+		margin-left: 10px;
 		padding-left: 0;
 	}
 	.content-card p {
@@ -204,6 +226,9 @@ em {
 		font-size: 110%;
 		max-width: 100%;
 		line-height: 19px;
+	}
+	.games-panel {
+		width: 100%;
 	}
 	.card-title.left {
 		float: none;
@@ -216,19 +241,24 @@ em {
 		clear: both;
 	}
 }
+
 @media screen and (max-width: 525px) {
 	header {
 		display: none;
 	}
 	.content-card {
-		width: 100%;
+		width: 95%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
+
 @media screen and (max-width: 460px) {
 	#intro {
 		height: 550px;
 	}
 }
+
 @media screen and (max-width: 400px) {
 	#intro {
 		height: 600px;
@@ -237,6 +267,7 @@ em {
 		font-size: 95%;
 	}
 }
+
 @media screen and (max-width: 330px) {
 	.content-card p {
 		font-size: 90%;
