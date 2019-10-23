@@ -9,47 +9,9 @@
 	<link rel="stylesheet" type="text/css" href="animations.css" />
 	<link rel="stylesheet" type="text/css" href="main.css" />
 	<link href="https://fonts.googleapis.com/css?family=Oswald|Raleway|Roboto+Condensed" rel="stylesheet" />
-	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
-	<script type="text/javascript">
-		var dfLoadStatus = 0;
-		var dfLoadFiles = [
-			["https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"],
-			["https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js",
-				"https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js",
-				"sidebar.js"
-			]
-		];
-
-		function downloadJSAtOnload() {
-			if (!dfLoadFiles.length) return;
-
-			var dfGroup = dfLoadFiles.shift();
-			dfLoadStatus = 0;
-
-			for (var i = 0; i < dfGroup.length; i++) {
-				dfLoadStatus++;
-				var element = document.createElement('script');
-				element.src = dfGroup[i];
-				element.onload = element.onreadystatechange = function() {
-					if (!this.readyState ||
-						this.readyState == 'complete') {
-						dfLoadStatus--;
-						if (dfLoadStatus == 0) downloadJSAtOnload();
-					}
-				};
-				document.body.appendChild(element);
-			}
-
-		}
-
-		if (window.addEventListener)
-			window.addEventListener("load", downloadJSAtOnload, false);
-		else if (window.attachEvent)
-			window.attachEvent("onload", downloadJSAtOnload);
-		else window.onload = downloadJSAtOnload;
-	</script>
 
 	<link rel="icon" type="image/png" href="images/LG_favicon.png" />
+	<script src="https://kit.fontawesome.com/5b21131784.js" crossorigin="anonymous"></script>
 	<!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <![endif]-->
@@ -57,83 +19,63 @@
 
 <body>
 	<div id="horizontal-scroll"></div>
-	<header id="top">
-		<div class="icon"></div>
-		<div class="scroll-indicator">
-			<div class="navbutton">
-				<a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
-			</div>
-			<div class="navbutton">
-				<a href="#games"><i class="fa fa-gamepad" aria-hidden="true"></i></a>
-			</div>
-			<div class="navbutton">
-				<a href="#design"><i class="fa fa-picture-o" aria-hidden="true"></i></a>
-			</div>
-			<div class="navbutton">
-				<a href="#web"><i class="fa fa-code" aria-hidden="true"></i></a>
-			</div>
-			<div class="navbutton">
-				<a href="#"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
-			</div>
-		</div>
-	</header>
-
-	<div class="content-card top" id="intro">
-		<div id="self-portrait"></div>
-		<section>
-			<p>
-				<em>Hi, I'm Liam.</em> <br/> I'm a self-taught creative Designer/Developer based in Wellington, New Zealand. I've been making things using computers since the very first time I used one.
-			</p>
-			<p>
-				I'm competent in many languages and applications, some of these are:
-			</p>
-			<ul>
-				<li>HTML</li>
-				<li>CSS</li>
-				<li>JavaScript</li>
-				<li>C#</li>
-				<li>Photoshop</li>
-				<li>Illustrator</li>
-				<li>Unity</li>
-			</ul>
-
-		</section>
-		<div style="clear: both;"></div>
+	<div id="link-bar">
+		<a href="https://liamgreen.net/"><div class="icon"></div></a>
+		<a href="https://www.linkedin.com/in/liam-green-07b34515b/"><i class="fab fa-linkedin"></i></a>
+		<a href="https://github.com/imrealnow?tab=repositories"><i class="fab fa-github-square"></i></i></a>
+		<a href="mailto://Contact@liamgreen.net"><i class="fas fa-envelope-square"></i></i></a>
 	</div>
 
-	<div class="content-card" id="games">
-		<div class="card-title left"> games </div>
-		<!-- actual content
-		<section>
-			<div class="games-panel">
-				<div class="game-tile left">item</div>
-				<div class="game-tile">item</div>
-				<div class="game-tile right">item</div>
-			</div>
-		</section>
-		-->
-		<div class="work-in-progress">
-			<div class="work-in-progress text">Work in Progress</div>
-			<div class="work-in-progress frown"><i class="fa fa-frown-o" aria-hidden="true"></i></div>
-		</div>
-		
-	</div>
+	<div id="bio-container">
+		<div class="content-card top" id="intro">
+			<div id="bio">
+				<p>
+					<em>Hi, I'm Liam.</em> <br/> I recently graduated
+					with a diploma in Software development. <br/><br/>
 
-	<div class="content-card" id="design">
-		<div class="card-title left"> design </div>
-		<div class="work-in-progress">
-			<div class="work-in-progress text">Work in Progress</div>
-			<div class="work-in-progress frown"><i class="fa fa-frown-o" aria-hidden="true"></i></div>
+					I love learning new things, developing clever solutions to complicated problems 
+					and working towards improving myself.<br/><br/>
+
+					I make games and unity packages in my spare time.
+					But, I also have experience in other
+					languages and technologies, Including:
+				</p>
+			</div>
+			<div style="flex-grow: 1; align-self: stretch;"></div>
+			<div id="self-portrait"></div>
 		</div>
-	</div>
-	<div class="content-card" id="web">
-		<div class="card-title left"> Web </div>
-		<div class="work-in-progress">
-			<div class="work-in-progress text">Work in Progress</div>
-			<div class="work-in-progress frown"><i class="fa fa-frown-o" aria-hidden="true"></i></div>
+		<div id="skills-bar">
+			<div class="skill"><h1>c#</h1></div>
+			<div class="skill"><h1>JS</h1></div>
+			<div class="skill"><h1>Python</h1></div>
+			<div class="skill"><h1>Java</h1></div>
+			<div class="skill"><h1>MySQL</h1></div>
 		</div>
 	</div>
 
+	<div class="content-card" id="project-card">
+		<div class="card-title left"> Projects </div>
+		<div id="projects">
+			<div class="projects-panel ball-tapper"></div>
+			<div class="projects-panel punch-tank"></div>
+		</div>
+	</div>
+	
+	<!--
+	<div class="content-card" id="contact">
+			<div class="contact-third">
+				<i class="fab fa-linkedin"></i>
+			</div>
+			<div class="contact-third">
+				<i class="fab fa-github-square"></i>
+			</div>
+			<div class="contact-third">
+				<div style="display:inline-block">
+					<i class="fas fa-list-alt"></i>
+				</div>
+			</div>
+	</div>
+	-->
 </body>
 
 </html>
